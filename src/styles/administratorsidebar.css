@@ -1,0 +1,170 @@
+/* administratorsidebar.css */
+.sidebar {
+  width: 260px;
+  background: #fff;
+  min-height: 100vh;
+  box-shadow: 0 2px 12px 0 rgba(60,72,107,0.08);
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 24px 0;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 18px 14px 18px;
+  border-bottom: 1px solid #f3f4f7;
+}
+
+.sidebar-logo-circle {
+  background: #114ad6;
+  color: #fff;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.55rem;
+  font-weight: bold;
+}
+
+.sidebar-title {
+  font-size: 1.32rem;
+  font-weight: 700;
+  color: #114ad6;
+  line-height: 1;
+  letter-spacing: -0.5px;
+}
+.sidebar-title.passport {
+  font-weight: 500;
+  font-size: 1.05rem;
+  color: #223155;
+  letter-spacing: -0.2px;
+}
+
+.sidebar-theme-toggle {
+  margin-left: auto;
+  color: #22315599;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  padding: 20px 20px 18px 20px;
+  border-bottom: 1px solid #f3f4f7;
+}
+
+.sidebar-avatar {
+  background: #edf0f7;
+  color: #5872c7;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+}
+
+.sidebar-role {
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: #25314c;
+}
+.sidebar-org {
+  font-size: 0.98rem;
+  color: #697084;
+  font-weight: 500;
+}
+
+.sidebar-nav {
+  margin-top: 16px;
+  flex: 1 1 auto;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 1.08rem;
+  padding: 11px 22px;
+  color: #48506c;
+  font-weight: 500;
+  border-radius: 9px;
+  margin: 2px 10px;
+  cursor: pointer;
+  transition: background 0.13s, color 0.13s;
+  user-select: none;
+}
+.nav-item:hover, .nav-item.active {
+  background: #f2f5fc;
+  color: #114ad6;
+}
+
+.nav-item .material-icons {
+  font-size: 1.33rem;
+  color: #7b89a6;
+  transition: color 0.15s;
+}
+.nav-item:hover .material-icons, .nav-item.active .material-icons {
+  color: #114ad6;
+}
+
+.sidebar-bottom {
+  border-top: 1px solid #f3f4f7;
+  margin-top: 14px;
+  padding-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.sidebar-btn {
+  background: none;
+  border: none;
+  color: #48506c;
+  font-size: 1.05rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 22px 8px 22px;
+  cursor: pointer;
+  border-radius: 7px;
+  transition: background 0.13s, color 0.13s;
+  margin: 0 10px;
+}
+
+.sidebar-btn:hover {
+  background: #f2f5fc;
+  color: #114ad6;
+}
+
+.sidebar-btn .material-icons {
+  font-size: 1.18rem;
+  color: #a2abc5;
+  transition: color 0.15s;
+}
+.sidebar-btn:hover .material-icons {
+  color: #114ad6;
+}
+
+@media (max-width: 850px) {
+  .sidebar {
+    width: 100%;
+    min-width: 0;
+    box-shadow: none;
+    border-right: 1px solid #edf0f7;
+  }
+}

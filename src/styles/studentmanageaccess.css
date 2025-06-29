@@ -1,0 +1,337 @@
+body {
+  background: #f7f9fb;
+}
+
+.manage-access-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.manage-access-header-card {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+  background: #fcfffd;
+  border: 1.5px solid #d3f2e6;
+  border-radius: 1.2rem;
+  padding: 1.5rem 2.5rem;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 2px 12px 0 rgba(80,180,120,0.04);
+}
+
+.manage-access-header-icon {
+  background: #e8fcf2;
+  border-radius: 50%;
+  width: 2.9rem;
+  height: 2.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #2ac38b;
+}
+
+.manage-access-title {
+  font-size: 1.7rem;
+  font-weight: 800;
+  margin-bottom: 0.15rem;
+  letter-spacing: -0.5px;
+}
+
+.manage-access-subtitle {
+  color: #7491ad;
+  font-size: 1.08rem;
+  font-weight: 400;
+}
+
+.manage-access-stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.3rem;
+}
+
+.manage-access-stat-card {
+  background: #fff;
+  border-radius: 1.05rem;
+  border: 1.3px solid #f0f3f7;
+  display: flex;
+  align-items: center;
+  gap: 1.15rem;
+  padding: 1.25rem 1.7rem;
+  min-height: 82px;
+  box-shadow: 0 2px 8px 0 rgba(60,60,120,0.04);
+  transition: box-shadow 0.16s;
+}
+
+.manage-access-stat-card:hover {
+  box-shadow: 0 6px 20px 0 rgba(60,60,120,0.08);
+}
+
+.stat-card-icon {
+  font-size: 2.05rem;
+  border-radius: 50%;
+  padding: 0.45rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #f7f9fb;
+  color: #4184ef;
+}
+
+.manage-access-stat-card:nth-child(1) .stat-card-icon { /* Pending */
+  background: #fff6d6;
+  color: #eab900;
+}
+.manage-access-stat-card:nth-child(2) .stat-card-icon { /* Active */
+  background: #e8faef;
+  color: #18bc68;
+}
+.manage-access-stat-card:nth-child(3) .stat-card-icon { /* Declined */
+  background: #ffe9ea;
+  color: #ee4242;
+}
+.manage-access-stat-card:nth-child(4) .stat-card-icon { /* Total Recruiters */
+  background: #eaf0fd;
+  color: #2863e4;
+}
+
+.stat-card-label {
+  font-size: 1.09rem;
+  color: #6d7a89;
+  font-weight: 500;
+  margin-top: 2px;
+}
+
+.stat-card-value {
+  font-weight: 800;
+  font-size: 1.35rem;
+  margin-bottom: 0.06rem;
+  letter-spacing: -1px;
+}
+
+.stat-card-value--success { color: #18bc68; }
+.stat-card-value--error   { color: #ee4242; }
+.stat-card-value--info    { color: #2863e4; }
+
+.manage-access-tabs {
+  display: flex;
+  gap: 1.3rem;
+  border-bottom: 2px solid #e7eaf0;
+  margin-bottom: 1.2rem;
+  font-size: 1.07rem;
+  padding-top: 0.2rem;
+}
+
+.manage-access-tab {
+  background: none;
+  border: none;
+  outline: none;
+  color: #465a70;
+  font-weight: 600;
+  padding: 0.7rem 0 0.56rem 0;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: -2px;
+  border-radius: 0;
+  transition: color .14s;
+  font-size: 1.09rem;
+}
+.manage-access-tab.active {
+  color: #1743a7;
+  font-weight: 700;
+  border-bottom: 2.5px solid #1743a7;
+  background: none;
+}
+.tab-count {
+  background: #eaf1fe;
+  color: #1743a7;
+  font-weight: 700;
+  font-size: 0.99rem;
+  border-radius: 1.2rem;
+  padding: 0.13rem 0.66rem;
+  margin-left: 0.45rem;
+}
+
+.pending-requests-title {
+  font-size: 1.19rem;
+  font-weight: 700;
+  margin-bottom: 1.22rem;
+  color: #142c50;
+  letter-spacing: -0.1px;
+}
+
+.manage-access-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.45rem;
+}
+
+.access-request-card {
+  background: #fff;
+  border: 1.3px solid #edeff2;
+  border-radius: 1.12rem;
+  padding: 2rem 2.2rem 1.5rem 2.2rem;
+  box-shadow: 0 3px 14px 0 rgba(28,37,56,0.045);
+  margin-bottom: 0.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.access-request-badge {
+  position: absolute;
+  top: 1.6rem;
+  right: 2.2rem;
+  background: #fffbe6;
+  color: #a17a00;
+  border-radius: 1.2rem;
+  padding: 0.36rem 1.1rem;
+  font-size: 1.01rem;
+  font-weight: 600;
+  box-shadow: 0 1px 6px 0 rgba(224,193,7,0.04);
+}
+
+.access-request-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.7rem;
+}
+
+.access-request-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.13rem;
+  max-width: 44vw;
+}
+
+.access-request-user {
+  font-size: 1.17rem;
+  font-weight: 700;
+  color: #1c2a43;
+}
+
+.access-request-company {
+  color: #6a7a90;
+  font-size: 1.03rem;
+  font-weight: 500;
+}
+
+.access-request-type {
+  font-weight: 600;
+  margin-top: 0.39rem;
+  font-size: 1.09rem;
+  color: #232940;
+}
+
+.access-request-purpose {
+  margin-top: 0.39rem;
+  font-size: 1.01rem;
+  color: #49516f;
+}
+
+.access-request-notes {
+  background: #f8f9fb;
+  border-radius: 0.59rem;
+  padding: 1rem 1.1rem;
+  font-size: 1.01rem;
+  color: #425072;
+  margin: 0.7rem 0 0.23rem 0;
+}
+
+.access-request-date {
+  color: #232940;
+  font-size: 1.04rem;
+  font-weight: 700;
+  margin-top: 0.65rem;
+  min-width: 210px;
+}
+
+.access-request-actions {
+  display: flex;
+  gap: 1.09rem;
+  margin-top: 1.1rem;
+}
+
+.btn-access {
+  border: none;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.58rem 1.7rem;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 0.63rem;
+}
+
+.btn-access-approve {
+  background: #13bb4b;
+  color: #fff;
+}
+.btn-access-approve:hover {
+  background: #14913c;
+}
+.btn-access-decline {
+  background: #fff;
+  color: #ec3848;
+  border: 1.2px solid #ec3848;
+}
+.btn-access-decline:hover {
+  background: #fff0f2;
+}
+.btn-access-contact {
+  background: #fff;
+  color: #1453a7;
+  border: 1.2px solid #1453a7;
+}
+.btn-access-contact:hover {
+  background: #f2f6fd;
+}
+
+/* Empty state styling */
+.access-empty-state {
+  background: #f9fafb;
+  border: 1.3px dashed #d5d9e0;
+  border-radius: 1.1rem;
+  color: #7d8ca2;
+  text-align: center;
+  padding: 3.3rem 0.8rem;
+  font-size: 1.18rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  letter-spacing: -0.2px;
+}
+
+@media (max-width: 1050px) {
+  .manage-access-stats-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.1rem;
+  }
+}
+
+@media (max-width: 750px) {
+  .manage-access-header-card {
+    flex-direction: column;
+    gap: 0.9rem;
+    padding: 1.2rem 0.7rem;
+  }
+  .manage-access-stats-row {
+    grid-template-columns: 1fr;
+    gap: 0.7rem;
+  }
+  .manage-access-stat-card {
+    padding: 0.92rem 1.08rem;
+  }
+  .access-request-card {
+    padding: 1rem 0.7rem;
+  }
+}

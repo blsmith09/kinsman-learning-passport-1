@@ -1,0 +1,156 @@
+.student-nft-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2.8rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.1rem;
+}
+
+.student-nft-header {
+  margin-bottom: 0.3rem;
+}
+.student-nft-title {
+  font-size: 2.1rem;
+  font-weight: 700;
+  color: #172145;
+}
+.student-nft-subtitle {
+  color: #64709a;
+  font-size: 1.12rem;
+  margin-top: 0.37rem;
+}
+
+.student-nft-main-row {
+  display: flex;
+  gap: 2.3rem;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.student-nft-card {
+  background: #fff;
+  border-radius: 1.05rem;
+  border: 1.3px solid #edf0f7;
+  box-shadow: 0 2px 13px 0 rgba(41, 61, 108, 0.035);
+  flex: 1;
+  min-width: 335px;
+  max-width: 600px;
+  padding: 2.3rem 2.15rem 1.8rem 2.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 265px;
+}
+.student-nft-card-title {
+  font-size: 1.33rem;
+  font-weight: 700;
+  color: #152863;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.17rem;
+}
+.nft-bolt-icon {
+  color: #3074e4;
+  font-size: 1.44em;
+}
+.nft-history-icon {
+  color: #ae50ed;
+  font-size: 1.34em;
+}
+.student-nft-card-subtitle {
+  color: #7b879c;
+  font-size: 1.01rem;
+  margin-bottom: 0.6rem;
+  margin-top: -0.17rem;
+}
+
+.student-nft-empty-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2.6rem 0 2rem 0;
+  color: #a5adba;
+  text-align: center;
+  gap: 0.34rem;
+}
+.student-nft-empty-title {
+  font-size: 1.13rem;
+  font-weight: 700;
+  color: #8b94a7;
+  margin-top: 0.59rem;
+}
+.student-nft-empty-desc {
+  font-size: 1.01rem;
+  color: #97a2b6;
+}
+
+.student-nft-how-section {
+  background: #f4f8ff;
+  border: 1.3px solid #cfe1fa;
+  border-radius: 1.1rem;
+  padding: 2rem 1.7rem 2.1rem 1.7rem;
+  margin-top: 1rem;
+  box-shadow: 0 2px 13px 0 rgba(41, 61, 108, 0.022);
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+.student-nft-how-title {
+  font-size: 1.34rem;
+  font-weight: 700;
+  color: #264282;
+  margin-bottom: 0.2rem;
+}
+.student-nft-how-row {
+  display: flex;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.student-nft-how-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.08rem;
+  min-width: 200px;
+  flex: 1;
+}
+.nft-step-icon {
+  color: #3666e2;
+  background: #e9f1ff;
+  border-radius: 50%;
+  font-size: 2.15rem;
+  padding: 0.32rem;
+}
+.nft-step-bold {
+  font-weight: 700;
+  color: #2856b2;
+  font-size: 1.09rem;
+}
+.nft-step-desc {
+  font-size: 1rem;
+  color: #5670a1;
+  margin-top: 0.12rem;
+}
+
+/* Responsive */
+@media (max-width: 1050px) {
+  .student-nft-main-row {
+    flex-direction: column;
+    gap: 1.3rem;
+  }
+  .student-nft-how-row {
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+}
+@media (max-width: 700px) {
+  .student-nft-container {
+    padding: 1.1rem 0.4rem;
+  }
+  .student-nft-card,
+  .student-nft-how-section {
+    padding: 1.05rem 0.65rem 0.95rem 0.65rem;
+  }
+}

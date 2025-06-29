@@ -1,0 +1,122 @@
+.student-sidebar {
+  width: 270px;
+  background: #fff;
+  height: 100vh;
+  border-right: 1px solid #ecf0f4;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+.student-sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 0.8em;
+  padding: 2em 1.2em 1em 1.2em;
+  border-bottom: 1px solid #f1f3f8;
+}
+
+.sidebar-logo-circle {
+  width: 44px;
+  height: 44px;
+  background: #f0f7fa;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #2265a7;
+}
+
+.sidebar-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #164578;
+  line-height: 1.1;
+}
+.sidebar-title.passport {
+  color: #3386c3;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.9em;
+  padding: 1.1em 1.2em 1.3em 1.2em;
+  border-bottom: 1px solid #f1f3f8;
+}
+
+.sidebar-avatar {
+  width: 38px;
+  height: 38px;
+  background: #e7ecf5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #758aa8;
+  font-size: 1.45em;
+}
+.sidebar-role {
+  font-size: 1em;
+  font-weight: 500;
+  color: #164578;
+}
+.sidebar-org {
+  font-size: 0.95em;
+  color: #7b8ca1;
+}
+
+.sidebar-nav ul {
+  list-style: none;
+  padding: 0.7em 0;
+  margin: 0;
+}
+.nav-item {
+  cursor: pointer;
+  padding: 0.85em 2.1em 0.85em 2.1em;
+  display: flex;
+  align-items: center;
+  font-size: 1.02em;
+  color: #3a5973;
+  gap: 1em;
+  border-radius: 7px;
+  transition: background 0.15s;
+}
+.nav-item:hover, .nav-item.active {
+  background: #e5f0f8;
+  color: #2063b4;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+  padding: 1.4em 1em 1.8em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65em;
+}
+.sidebar-btn {
+  background: #f3f8fa;
+  border: none;
+  border-radius: 7px;
+  padding: 0.68em 1.2em;
+  font-size: 1em;
+  color: #3a5973;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.6em;
+  cursor: pointer;
+  transition: background 0.14s;
+}
+.sidebar-btn:hover {
+  background: #e3eefc;
+  color: #2265a7;
+}
+
+@media (max-width: 900px) {
+  .student-sidebar { width: 100%; }
+  .sidebar-nav ul { padding: 0; }
+}

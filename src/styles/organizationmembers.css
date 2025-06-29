@@ -1,0 +1,151 @@
+.org-members-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 38px 24px;
+}
+.org-members-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+.org-members-desc {
+  color: #555d67;
+  margin-bottom: 28px;
+  font-size: 1.08rem;
+}
+.org-members-stats-row {
+  display: flex;
+  gap: 22px;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+}
+.org-members-stat-card {
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.06);
+  padding: 18px 30px;
+  min-width: 185px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.org-members-stat-value {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #23272f;
+}
+.org-members-stat-label {
+  color: #555d67;
+  font-size: 1.01rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+}
+.material-icons.admin {
+  color: #d7263d;
+}
+.material-icons.student {
+  color: #19c37d;
+}
+.material-icons.recruiter {
+  color: #9f52ff;
+}
+.org-members-list-card {
+  background: #fff;
+  border-radius: 14px;
+  margin-top: 12px;
+  box-shadow: 0 2px 8px rgba(30,41,59,0.06);
+  padding: 10px 0 10px 0;
+}
+.org-members-list-title {
+  font-size: 1.22rem;
+  font-weight: 600;
+  padding: 20px 36px 12px 36px;
+  border-bottom: 1px solid #f2f4f8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.org-members-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.org-member-row {
+  display: flex;
+  align-items: center;
+  background: #f9fafb;
+  border-radius: 8px;
+  margin: 10px 24px;
+  padding: 18px 24px;
+  font-size: 1.11rem;
+  gap: 18px;
+  position: relative;
+}
+.org-member-row.admin {
+  border-left: 4px solid #d7263d;
+}
+.org-member-row.student {
+  border-left: 4px solid #19c37d;
+}
+.org-member-row.recruiter {
+  border-left: 4px solid #9f52ff;
+}
+.org-member-avatar {
+  font-size: 2.4rem;
+  margin-right: 8px;
+  opacity: 0.82;
+}
+.org-member-info {
+  flex: 1;
+}
+.org-member-name {
+  font-weight: 600;
+  color: #1b2430;
+  margin-bottom: 2px;
+  font-size: 1.06rem;
+}
+.org-member-id {
+  font-size: 0.98rem;
+  color: #697382;
+}
+.org-member-role {
+  margin-left: 20px;
+}
+.member-badge {
+  border-radius: 10px;
+  padding: 3px 14px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.03em;
+  display: inline-block;
+}
+.member-badge.admin {
+  background: #d7263d;
+}
+.member-badge.student {
+  background: #a589ff;
+}
+.member-badge.recruiter {
+  background: #0a85ff;
+}
+.org-members-empty {
+  text-align: center;
+  padding: 60px 0;
+  color: #7d8596;
+}
+.org-members-empty-icon {
+  font-size: 3.2rem;
+  margin-bottom: 8px;
+  display: block;
+  color: #bfc7d2;
+}
+.org-members-empty-title {
+  font-size: 1.18rem;
+  font-weight: 500;
+  margin-top: 5px;
+  color: #757e8c;
+}

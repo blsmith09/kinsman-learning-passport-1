@@ -1,0 +1,203 @@
+.my-employment-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+.my-employment-header {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  background: #f3fcfb;
+  border: 1.3px solid #b7e3e0;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.my-employment-header-icon {
+  background: #d1fae5;
+  border-radius: 50%;
+  width: 2.6rem;
+  height: 2.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #089981;
+  font-size: 1.5rem;
+}
+
+.my-employment-title {
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+}
+
+.my-employment-subtitle {
+  color: #6a7a90;
+  font-size: 1.08rem;
+}
+
+.employment-opportunities-section {
+  background: #fff;
+  border: 1.4px solid #e6e9ee;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 10px 0 rgba(28,37,56,0.05);
+  padding: 2rem 2.2rem 1.4rem 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.employment-opportunities-title {
+  font-size: 1.18rem;
+  font-weight: 700;
+  margin-bottom: 1.3rem;
+  color: #232940;
+}
+
+.opportunity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.opportunity-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f6faff;
+  border-radius: 0.8rem;
+  border: 1.1px solid #dde3f1;
+  padding: 1.12rem 1.5rem;
+  font-size: 1.06rem;
+  cursor: pointer;
+  transition: background 0.15s, border 0.15s;
+}
+.opportunity-card.selected,
+.opportunity-card:hover {
+  background: #e9f1fb;
+  border-color: #b4d5ef;
+}
+
+.opportunity-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.12rem;
+}
+.opportunity-role {
+  font-weight: 700;
+  color: #1c2a43;
+  font-size: 1.11rem;
+}
+.opportunity-company {
+  color: #6a7a90;
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+.opportunity-status {
+  padding: 0.29rem 1rem;
+  border-radius: 1.2rem;
+  font-size: 0.96rem;
+  font-weight: 600;
+  background: #eef1ff;
+  color: #3559c7;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+}
+.opportunity-status--scheduled {
+  background: #e7f6ff;
+  color: #2a7cd6;
+}
+.opportunity-status--progress {
+  background: #fff2e1;
+  color: #ce8700;
+}
+.opportunity-status--feedback {
+  background: #f6ecfd;
+  color: #9646e7;
+}
+
+.opportunity-date {
+  color: #7e8799;
+  font-size: 1.01rem;
+  font-weight: 500;
+  min-width: 110px;
+  text-align: right;
+}
+
+/* Stepper Section */
+.employment-steps-section {
+  background: #fff;
+  border: 1.4px solid #e6e9ee;
+  border-radius: 1.1rem;
+  box-shadow: 0 2px 10px 0 rgba(28,37,56,0.05);
+  padding: 1.8rem 2.2rem 1.5rem 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.steps-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2.5rem;
+  margin-bottom: 1.8rem;
+}
+.step-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 90px;
+}
+.step-circle {
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  background: #f6faff;
+  color: #1559c4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.17rem;
+  border: 2.4px solid #d9e3f9;
+  margin-bottom: 0.18rem;
+  transition: background .18s, border .18s;
+}
+.step-indicator.active .step-circle {
+  background: #1559c4;
+  color: #fff;
+  border: 2.4px solid #1559c4;
+}
+.step-label {
+  font-size: 1rem;
+  color: #3b4c5f;
+  font-weight: 500;
+  text-align: center;
+}
+.step-indicator.active .step-label {
+  color: #1559c4;
+  font-weight: 700;
+}
+
+.step-bar {
+  width: 50px;
+  height: 3px;
+  background: #e4e9f7;
+  margin: 0 0.4rem;
+}
+
+@media (max-width: 900px) {
+  .my-employment-container { padding: 1rem 0.4rem; }
+  .employment-steps-section,
+  .employment-opportunities-section { padding: 1.1rem 0.7rem; }
+  .steps-row { gap: 0.6rem; }
+  .step-indicator { min-width: 60px; }
+}
+@media (max-width: 600px) {
+  .my-employment-header { flex-direction: column; gap: 0.8rem; padding: 1rem; }
+  .employment-steps-section,
+  .employment-opportunities-section { padding: 0.7rem 0.3rem; }
+}

@@ -1,0 +1,114 @@
+.opps-main {
+  padding: 0 32px 48px 32px;
+}
+.opps-welcome {
+  background: #e8f7f1;
+  padding: 32px 24px 24px 24px;
+  margin: 32px auto 20px auto;
+  border-radius: 18px;
+  position: relative;
+}
+.create-opp-btn {
+  position: absolute;
+  top: 32px;
+  right: 32px;
+  background: #00b894;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.create-opp-btn .material-icons { margin-right: 6px; }
+.opps-kpi-row {
+  display: flex;
+  gap: 18px;
+  margin: 30px 0 18px 0;
+}
+.opps-kpi-card {
+  flex: 1;
+  background: #fff;
+  border-radius: 13px;
+  box-shadow: 0 2px 14px rgba(32, 91, 134, 0.08);
+  padding: 20px 26px 12px 26px;
+}
+.kpi-title { font-weight: 500; color: #343a40; display: flex; align-items: center; gap: 7px; margin-bottom: 4px;}
+.kpi-icon { color: #1890ff; font-size: 1.2em;}
+.kpi-value { font-size: 1.7em; font-weight: 600; }
+.kpi-warning { color: #ff8800; }
+.opps-searchbar-row {
+  display: flex; align-items: center; gap: 14px; margin-bottom: 20px;
+}
+.opps-search-input {
+  flex: 2; padding: 12px 16px; font-size: 1em; border-radius: 8px; border: 1px solid #dde4ec; background: #f7fafc;
+}
+.opps-filter-select, .opps-filter-btn {
+  font-size: 1em; padding: 10px 16px; border-radius: 7px; border: 1px solid #dde4ec; background: #fff;
+}
+.opps-filter-btn { background: #f5f6fa; border: 1px solid #dde4ec; cursor: pointer; display: flex; align-items: center; gap: 6px;}
+.opps-list { display: flex; flex-direction: column; gap: 30px; }
+.opps-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 18px rgba(72, 138, 204, 0.10);
+  padding: 28px 28px 20px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.opps-card-header { display: flex; justify-content: space-between; align-items: flex-start; }
+.opp-title { font-size: 1.17em; font-weight: bold; }
+.opp-company { color: #207cbf; font-weight: 500; margin-bottom: 2px; }
+.opp-meta { color: #888; font-size: .99em; display: flex; gap: 18px; margin-top: 2px; }
+.opp-icon { font-size: 1em; margin-right: 2px; }
+.opp-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 6px;}
+.opp-badge { background: #e7f7f4; color: #26a69a; border-radius: 9px; font-size: .87em; padding: 3px 12px; font-weight: 600;}
+.opp-badge.fulltime { background: #e4ecfa; color: #466fff;}
+.opp-badge.active { background: #eafaea; color: #13b259;}
+.opp-posted { font-size: .89em; color: #aaa; margin-top: 2px;}
+.opps-card-metrics { display: flex; gap: 30px; margin: 16px 0 10px 0; }
+.opp-metric { flex: 1; background: #f8fafb; border-radius: 8px; padding: 12px; display: flex; flex-direction: column; align-items: center; }
+.opp-metric .metric-label { font-size: .92em; color: #9a9a9a; }
+.opp-metric .metric-value { font-weight: 700; font-size: 1.35em; color: #2c82e0; }
+.opp-metric.applicants .metric-value { color: #2866e7;}
+.opp-metric.matches .metric-value { color: #38bb7b;}
+.opp-metric.matchrate .metric-value { color: #ad60f7;}
+.opp-requirements { margin-bottom: 7px; }
+.opp-tag {
+  background: #f1f3f5;
+  color: #2669b2;
+  font-size: .92em;
+  padding: 3px 9px;
+  border-radius: 8px;
+  margin-right: 6px;
+  font-weight: 500;
+}
+.opps-card-actions { display: flex; gap: 11px; flex-wrap: wrap; }
+.opp-btn {
+  border: none;
+  border-radius: 7px;
+  padding: 7px 15px;
+  font-size: .98em;
+  font-weight: 500;
+  background: #f4f8fc;
+  color: #207cbf;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: background .18s;
+}
+.opp-btn.view { background: #ecf3fc; color: #1854b4;}
+.opp-btn.edit { background: #fff4ec; color: #e88a14;}
+.opp-btn.share { background: #f3f4ff; color: #7e51e3;}
+.opp-btn.pause { background: #f4f9f4; color: #21b67a;}
+.opp-btn.archive { background: #f9f4f4; color: #ce6d6d;}
+.opp-btn:hover { background: #e3edfb;}
+@media (max-width: 900px) {
+  .opps-kpi-row, .opps-searchbar-row { flex-direction: column; }
+  .create-opp-btn { position: static; margin-top: 16px;}
+}

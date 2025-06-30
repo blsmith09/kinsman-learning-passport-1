@@ -9,10 +9,12 @@ export default function AdministratorSidebar({ onLogout }) {
   // Test/dev mode switches
   const switchToStudentView = () => {
     sessionStorage.setItem("userRole", "student");
+    sessionStorage.removeItem("isTestUser"); // Reset if leaving test user
     window.location.href = "/dashboard";
   };
   const switchToRecruiterView = () => {
     sessionStorage.setItem("userRole", "recruiter");
+    sessionStorage.removeItem("isTestUser");
     window.location.href = "/dashboard";
   };
 

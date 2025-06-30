@@ -60,13 +60,15 @@ function App() {
     return () => window.removeEventListener("storage", handler);
   }, []);
 
+  // --------- FIXED handleLogin -------------
   const handleLogin = (loginRole) => {
     sessionStorage.setItem("isLoggedIn", "true");
     if (loginRole) sessionStorage.setItem("userRole", loginRole);
     setIsLoggedIn(true);
-    setRole(sessionStorage.getItem("userRole") || "recruiter");
+    setRole(loginRole || "recruiter");
     setIsTestUser(sessionStorage.getItem("isTestUser") === "true");
   };
+  // -----------------------------------------
 
   const handleLogout = () => {
     sessionStorage.removeItem("isLoggedIn");

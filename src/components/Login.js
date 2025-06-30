@@ -11,7 +11,7 @@ export default function Login({ onLogin }) {
     e.preventDefault();
     sessionStorage.removeItem("isTestUser");
     sessionStorage.setItem("userRole", role);
-    if (onLogin) onLogin();
+    if (onLogin) onLogin(role);    // <-- Pass role here!
     navigate("/dashboard");
   };
 
@@ -20,7 +20,7 @@ export default function Login({ onLogin }) {
     e.preventDefault();
     sessionStorage.setItem("isTestUser", "true");
     sessionStorage.removeItem("userRole"); // No role set, will default to recruiter
-    if (onLogin) onLogin();
+    if (onLogin) onLogin("recruiter");     // <-- Explicitly pass "recruiter"
     navigate("/dashboard");
   };
 

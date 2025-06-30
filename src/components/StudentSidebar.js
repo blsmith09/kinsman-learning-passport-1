@@ -14,10 +14,12 @@ export default function StudentSidebar({ onLogout, student }) {
   // For switching roles in test/dev mode
   const switchToRecruiterView = () => {
     sessionStorage.setItem("userRole", "recruiter");
+    sessionStorage.removeItem("isTestUser"); // Ensure this is reset
     window.location.href = "/dashboard"; // Force reload for clean sidebar swap
   };
   const switchToAdminView = () => {
     sessionStorage.setItem("userRole", "admin");
+    sessionStorage.removeItem("isTestUser");
     window.location.href = "/dashboard";
   };
 
@@ -39,7 +41,6 @@ export default function StudentSidebar({ onLogout, student }) {
         <div>
           <div className="sidebar-role">Student User</div>
           <div className="sidebar-org">
-            {/* Display student's name if available, fallback to generic */}
             {student?.name || "Student Name"}
           </div>
         </div>

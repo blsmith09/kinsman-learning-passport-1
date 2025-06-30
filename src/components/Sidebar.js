@@ -2,26 +2,24 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/sidebar.css";
 
-export default function Sidebar({ onLogout }) {
+export default function Sidebar({ onLogout, isTestUser }) {
   const navigate = useNavigate();
-  const isTestUser = sessionStorage.getItem("isTestUser") === "true";
 
   const handleLogout = () => {
     sessionStorage.removeItem("isTestUser");
     if (onLogout) onLogout();
   };
 
-  // Use navigate (no reload needed, keeps you logged in)
   const switchToStudentView = () => {
     sessionStorage.setItem("userRole", "student");
     navigate("/dashboard");
-    window.location.reload(); // Optional: Only needed if sidebar doesn't re-render
+    window.location.reload();
   };
 
   const switchToAdminView = () => {
     sessionStorage.setItem("userRole", "admin");
     navigate("/dashboard");
-    window.location.reload(); // Optional: Only needed if sidebar doesn't re-render
+    window.location.reload();
   };
 
   return (

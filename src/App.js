@@ -14,7 +14,7 @@ import AdminDocumentManagement from "./components/AdminDocumentManagement";
 import DocumentVerificationReview from "./components/DocumentVerificationReview";
 import TokenQueueManagement from "./components/TokenQueueManagement";
 import DistributionRequests from "./components/DistributionRequests";
-import OrganizationMembers from "./components/OrganizationMembers"; // <-- NEW
+import OrganizationMembers from "./components/OrganizationMembers";
 import MyWallet from "./components/MyWallet";
 import ManageMyDay from "./components/ManageMyDay";
 import ManageMyPipeline from "./components/ManageMyPipeline";
@@ -38,7 +38,7 @@ import "./styles/admindocumentmanagement.css";
 import "./styles/documentverificationreview.css";
 import "./styles/tokenqueuemanagement.css";
 import "./styles/distributionrequests.css";
-import "./styles/organizationmembers.css"; // <-- NEW
+import "./styles/organizationmembers.css";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = React.useState(() =>
@@ -60,7 +60,6 @@ function App() {
     return () => window.removeEventListener("storage", handler);
   }, []);
 
-  // --------- FIXED handleLogin -------------
   const handleLogin = (loginRole) => {
     sessionStorage.setItem("isLoggedIn", "true");
     if (loginRole) sessionStorage.setItem("userRole", loginRole);
@@ -68,7 +67,6 @@ function App() {
     setRole(loginRole || "recruiter");
     setIsTestUser(sessionStorage.getItem("isTestUser") === "true");
   };
-  // -----------------------------------------
 
   const handleLogout = () => {
     sessionStorage.removeItem("isLoggedIn");
@@ -83,22 +81,22 @@ function App() {
     alert("Wallet connect coming soon!");
   };
 
+  // Corrected: Always show the sidebar for the ACTUAL role, not for isTestUser globally.
   function getSidebarByRole(role, onLogout) {
-    if (role === "student") return <StudentSidebar onLogout={onLogout} />;
-    if (role === "admin" || isTestUser) return <AdministratorSidebar onLogout={onLogout} />;
-    return <Sidebar onLogout={onLogout} />;
+    if (role === "student") return <StudentSidebar onLogout={onLogout} isTestUser={isTestUser} />;
+    if (role === "admin") return <AdministratorSidebar onLogout={onLogout} isTestUser={isTestUser} />;
+    return <Sidebar onLogout={onLogout} isTestUser={isTestUser} />;
   }
 
   function getDashboardByRole(role) {
     if (role === "student") return <StudentDashboard />;
-    if (role === "admin" || isTestUser) return <AdministratorDashboard />;
+    if (role === "admin") return <AdministratorDashboard />;
     return <RecruiterDashboard />;
   }
 
   return (
     <Router>
       <Routes>
-        {/* Login */}
         <Route
           path="/"
           element={
@@ -146,7 +144,7 @@ function App() {
         <Route
           path="/academic-management"
           element={
-            isLoggedIn && (role === "admin" || isTestUser) ? (
+            isLoggedIn && role === "admin" ? (
               <div className="app-layout">
                 {getSidebarByRole(role, handleLogout)}
                 <main className="main-content">
@@ -163,7 +161,7 @@ function App() {
         <Route
           path="/student-records"
           element={
-            isLoggedIn && (role === "admin" || isTestUser) ? (
+            isLoggedIn && role === "admin" ? (
               <div className="app-layout">
                 {getSidebarByRole(role, handleLogout)}
                 <main className="main-content">
@@ -180,7 +178,7 @@ function App() {
         <Route
           path="/nft-diplomas"
           element={
-            isLoggedIn && (role === "admin" || isTestUser) ? (
+            isLoggedIn && role === "admin" ? (
               <div className="app-layout">
                 {getSidebarByRole(role, handleLogout)}
                 <main className="main-content">
@@ -197,7 +195,7 @@ function App() {
         <Route
           path="/upload-documents"
           element={
-            isLoggedIn && (role === "admin" || isTestUser) ? (
+            isLoggedIn && role === "admin" ? (
               <div className="app-layout">
                 {getSidebarByRole(role, handleLogout)}
                 <main className="main-content">
@@ -214,7 +212,7 @@ function App() {
         <Route
           path="/document-review"
           element={
-            isLoggedIn && (role === "admin" || isTestUser) ? (
+            isLoggedIn && role === "admin" ? (
               <div className="app-layout">
                 {getSidebarByRole(role, handleLogout)}
                 <main className="main-content">
@@ -231,7 +229,7 @@ function App() {
         <Route
           path="/token-queue"
           element={
-            isLoggedIn && (role === "admin" || isTestUser) ? (
+            isLoggedIn && role === "admin" ? (
               <div className="app-layout">
                 {getSidebarByRole(role, handleLogout)}
                 <main className="main-content">
@@ -248,7 +246,7 @@ function App() {
         <Route
           path="/distribution-requests"
           element={
-            isLoggedIn && (role === "admin" || isTestUser) ? (
+            isLoggedIn && role === "admin" ? (
               <div className="app-layout">
                 {getSidebarByRole(role, handleLogout)}
                 <main className="main-content">
@@ -265,11 +263,11 @@ function App() {
         <Route
           path="/organization-members"
           element={
-            isLoggedIn && (role === "admin" || isTestUser) ? (
+            isLoggedIn && role === "admin" ? (
               <div className="app-layout">
                 {getSidebarByRole(role, handleLogout)}
                 <main className="main-content">
-                  <OrganizationMembers members={[]} /> {/* <-- Replace with actual member data */}
+                  <OrganizationMembers members={[]} />
                 </main>
               </div>
             ) : (
@@ -367,7 +365,7 @@ function App() {
         <Route
           path="/admin-dashboard"
           element={
-            isLoggedIn && (role === "admin" || isTestUser) ? (
+            isLoggedIn && role === "admin" ? (
               <div className="app-layout">
                 {getSidebarByRole(role, handleLogout)}
                 <main className="main-content">

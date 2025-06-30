@@ -1,10 +1,9 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import "../styles/sidebar.css"; // or studentsidebar.css if you want different styles
+import "../styles/sidebar.css";
 
-export default function StudentSidebar({ onLogout, student }) {
+export default function StudentSidebar({ onLogout, student, isTestUser }) {
   const navigate = useNavigate();
-  const isTestUser = sessionStorage.getItem("isTestUser") === "true";
 
   const handleLogout = () => {
     sessionStorage.removeItem("isTestUser");
@@ -14,12 +13,12 @@ export default function StudentSidebar({ onLogout, student }) {
   // For switching roles in test/dev mode
   const switchToRecruiterView = () => {
     sessionStorage.setItem("userRole", "recruiter");
-    sessionStorage.removeItem("isTestUser"); // Ensure this is reset
-    window.location.href = "/dashboard"; // Force reload for clean sidebar swap
+    sessionStorage.setItem("isTestUser", "true");
+    window.location.href = "/dashboard";
   };
   const switchToAdminView = () => {
     sessionStorage.setItem("userRole", "admin");
-    sessionStorage.removeItem("isTestUser");
+    sessionStorage.setItem("isTestUser", "true");
     window.location.href = "/dashboard";
   };
 
@@ -78,7 +77,8 @@ export default function StudentSidebar({ onLogout, student }) {
           <span className="material-icons">settings</span> Theme
           <span className="material-icons">dark_mode</span>
         </button>
-        {isTestUser && (
+        {/* --- This block should show when isTestUser is true --- */}
+        {isTestUser ? (
           <>
             <button className="sidebar-btn" onClick={switchToAdminView}>
               <span className="material-icons">admin_panel_settings</span> Switch to Admin View
@@ -87,7 +87,7 @@ export default function StudentSidebar({ onLogout, student }) {
               <span className="material-icons">business</span> Switch to Recruiter View
             </button>
           </>
-        )}
+        ) : null}
       </div>
     </aside>
   );
